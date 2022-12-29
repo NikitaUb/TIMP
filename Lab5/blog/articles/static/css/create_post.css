@@ -1,0 +1,25 @@
+body{
+background: #1abc9c;
+font-family: Tahoma, Arial, sans-serif;
+color: #ffffff;
+}
+form input, h1, textarea {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+form input, textarea {
+    background-color: white;
+    color:black;
+    margin-bottom: 25px;
+}
+form input[type="text"] {
+    width: 90%;
+}
+form textarea {
+    height: 250px;
+    resize: none;
+    width: 90%;
+}
+.error {
+    margin-left: 5%;
+}
