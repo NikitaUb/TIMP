@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
+        <title>Привет, Мир!</title>
+    </head>
+    <body>
+    <div class="header">
+        <img src="static/logo.png">
+    </div>
+    <div class="archive">
+        {% for post in posts %}
+        <a href="/article/{{post.id}}"><h2 class="post-title">{{ post.title }}</h2></a>
+        <input type="button" value="Свернуть" class="hide_btn" name="Shown" id="{{post.id}}">
+            <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+            {% endfor %}
+    </div>
+    <script src="{{ STATIC_URL }}/static/js/helloworld.js"></script>
+    <script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+    </body>
+</html>
